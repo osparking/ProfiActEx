@@ -80,8 +80,8 @@
 								</goals>
 								<configuration>
 									<tasks>
-										<echo>Using env.test.properties</echo>
-										<copy file="src/main/resources/env.test.properties"
+										<echo>Using env.properties</echo>
+										<copy file="src/main/resources/env.properties"
 											tofile="${project.build.outputDirectory}/env.properties" />
 									</tasks>
 								</configuration>

@@ -38,6 +38,13 @@
 	<profiles>
 		<profile>
 			<id>test</id>
+			<activation>
+				<file>
+					<missing>
+						target/generated-sources/non_existing_file
+					</missing>
+				</file>
+			</activation>
 			<build>
 				<plugins>
 					<plugin>
@@ -65,13 +72,6 @@
 		</profile>
 		<profile>
 			<id>normal</id>
-			<activation>
-				<file>
-					<exists>
-						target/classes/application.properties
-					</exists>
-				</file>
-			</activation>
 			<build>
 				<plugins>
 					<plugin>

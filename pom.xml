@@ -38,14 +38,6 @@
 	<profiles>
 		<profile>
 			<id>test</id>
-			<activation>
-				<os>
-					<name>Windows 10</name>
-					<family>Windows</family>
-					<arch>amd64</arch>
-					<version>10.0</version>
-				</os>
-			</activation>			
 			<build>
 				<plugins>
 					<plugin>
@@ -71,9 +63,15 @@
 				</plugins>
 			</build>
 		</profile>
-
 		<profile>
 			<id>normal</id>
+			<activation>
+				<file>
+					<exists>
+						target/classes/application.properties
+					</exists>
+				</file>
+			</activation>
 			<build>
 				<plugins>
 					<plugin>
@@ -99,7 +97,6 @@
 				</plugins>
 			</build>
 		</profile>
-
 		<profile>
 			<id>prod</id>
 			<build>
